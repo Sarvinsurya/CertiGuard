@@ -1,0 +1,45 @@
+{
+  "name": "certiguard-backend",
+  "version": "1.0.0",
+  "description": "CertiGuard backend - Phase 1: certificate registration, SHA-256 hashing, Ed25519 signatures, verification, revocation",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "init:keys": "tsx src/scripts/initKeys.ts",
+    "migrate": "tsx src/scripts/migrate.ts",
+    "seed": "tsx src/scripts/seed.ts",
+    "bootstrap:admin": "tsx src/scripts/bootstrapAdmin.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "better-sqlite3": "11.8.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "2.8.5",
+    "express": "4.21.2",
+    "helmet": "^8.0.0",
+    "multer": "^2.0.2",
+    "otplib": "^12.0.1",
+    "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.33.5",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.12",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "2.8.17",
+    "@types/express": "4.17.21",
+    "@types/multer": "1.4.12",
+    "@types/node": "22.10.5",
+    "@types/pngjs": "^6.0.5",
+    "@types/qrcode": "^1.5.5",
+    "@types/supertest": "6.0.2",
+    "supertest": "7.0.0",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3",
+    "vitest": "2.1.8"
+  }
+}

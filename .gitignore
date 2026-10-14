@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# ---- CertiGuard sensitive artifacts (NEVER commit) ----
+# Issuer private signing keys
+backend/keys/
+# SQLite database files
+backend/database/*.db
+backend/database/*.db-journal
+backend/database/*.db-wal
+backend/database/*.db-shm
+# Uploaded / stored certificate documents
+backend/storage/
+# Temporary upload scratch space
+backend/tmp/
